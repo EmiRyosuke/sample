@@ -1,271 +1,235 @@
-* {
-  box-sizing: border-box;
-}
+@charset "utf-8";
 
 body {
-  margin: 0;
-  font-family: "Hiragino Kaku Gothic ProN";
+	margin: 0;
+	padding: 0;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	color: #333;
+	font-size: 13px;
+	line-height: 150%;
 }
 
-a {
-  text-decoration: none;
+/* -------------------- wrapper -------------------- */
+#wrapper {
+	width: 100%;
+	margin: auto;
+	padding: 0px;
+	border: 0px;
+	background-color: #FFF;	
+	top: 10px;
+	position: relative;
 }
 
-.container {
-  width: 100%;
-  padding: 0 15px;
+/* -------------------- header -------------------- */
+#header {
+	width: 100%;
+	position: relative
+}
+#header h1 {
+	margin: 0;
+	padding: 0;
+}
+
+#header p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: 000;
+	font-weight: bold;
+	text-align: center;
+	font-size: 50px;
+}
+
+#corridor {
+	width: 100%;
+	height: auto;
+}
+
+/* -------------------- footer -------------------- */
+#footer {
+	clear: both;
+	width: 100%;
+	padding: 3px 0 3px 0;
+	background: #39F;
+	color: #FFF;
+	font-weight: bold;
+	text-align: center;
+}
+
+/* -------------------- nav -------------------- */
+#nav {
+	width: 100%;
+}
+#nav ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+#nav ul li {
+	float: left;
+	width: 20%;
+	text-align: center;
+}
+#nav ul li a {
+	display: block;
+	height: 20px;
+	margin: 0;
+	padding: 10px;
+	color: #FFF;
+	font-size: 20px;
+	text-decoration: none;
+	background-color: green;
+}
+
+/* -------------------- container -------------------- */
+#container {
+	width: 100%;
+	margin: auto ;
+	padding: auto;
+	padding-top: 20px;
+	clear: both;
+}
+/* -------------------- main -------------------- */
+#main {
+	float: left;
+	width: 60%;
+	padding: 10px 30px 10px 10px;
+}
+#main h2 {
+	margin: 0 0 10px 0;
+	padding: 3px 10px 3px 10px;
+	color: #FFF;
+	font-size: 16px;
+	border-left: solid 10px #C00;
+	background: #F90 url(../images/main_h2.jpg) right top repeat-y;
+}
+#main p {
+	margin: 0;
+	padding: 0;
+}
+#main .post {
+	margin: 0 0 30px 0;
+}
+
+#main .post img.right {
+	margin: 0 0 0 8px;
+}
+#main .post img.left {
+	margin: 0 8px 0 0;
+}
+
+.right {
+	float: right;
+	width: 40%;
+	height: auto;
+}
+.left {
+	float: left;
+	width: 40%;
+	height: auto;
+}
+
+/* -------------------- clearfix -------------------- */
+.clearfix {
+	zoom: 1;
+}
+.clearfix:after{
+	content: ""; 
+	display: block; 
+	clear: both;
+}
+
+/* -------------------- side -------------------- */
+#side {
+	float: right;
+	width: 30%;
+	padding: 20px;
+	background-color: #F99;
+}
+#side .box {
+	margin: 0 auto 30px auto;
+	padding: 0 0 20px 0;
+	background: url(images/side_box.png) bottom no-repeat;
+}
+#side .box h2 {
+	margin: 0;
+	padding: 8px;
+	text-align: center;
+	color: #fff;
+	font-size: 16px;
+	line-height: 16px;
+	font-weight: normal;
+	background: url(images/side_box_h2.png) center no-repeat;
+}
+#side .box .boxBody {
+	padding: 8px;
+	border-right: solid 1px #C36;
+	border-bottom: solid 1px #C36;
+	border-left: solid 1px #C36;
+	background: #fff;
+}
+#side .box .boxBody ul {
+	margin: 0 0 16px 0;
+	padding: 0;
+}
+#side .box .boxBody ul li {
+	padding: 8px 0 8px 4px;
+	list-style: none;
+	border-bottom: solid 1px #C36;
+}
+table th {/*table内のthに対して*/
+  padding: 10px;/*上下左右10pxずつ*/
+}
+
+table td {/*table内のtdに対して*/
+  padding: 3px 30px;/*上下3pxで左右10px*/
+}
+table{
+ position: relative;
+    top: 5px;
+    left: 100px;
+}
+table {
+  text-align: center;
+}
+table th{/*thに対して*/
+  color: #FF9800;/*文字色*/
+  background: #fff5e5;/*背景色*/
+}
+
+
+.item {
+  border-radius: 10px;
+  background: #edf;
+  padding: 15px;
+  margin: 5px;
+  text-align: center;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+p {
+  text-align: left;
+}
+p1 {
+  text-align: center;
+  font-weight: 900;
+}
+ 
+ 
+/* Responsive */
+@media ( min-width : 600px ){
+   .flexbox {
+      display: flex;
+ 	 justify-content: center;
+ 	 background: #ccc;
+ 	 flex-wrap: wrap;
+   }
+  .item {
+    width: 26%;
+  }
+ .box1{
+  width: 480px;
   margin: 0 auto;
-}
-
-.top-wrapper {
-  padding: 180px 0 100px 0;
-  background-image: url(top.png);
-  background-size: cover;
-  color: white;
-  text-align: center;
-}
-
-.top-wrapper h1 {
-  opacity: 0.7;
-  font-size: 45px;
-  letter-spacing: 5px;
-}
-
-.top-wrapper p {
-  opacity: 0.7;
-  font-size: 16px;
-  margin-bottom: 40px;
-}
-
-.btn-wrapper {
-  text-align: center;
-}
-
-.btn-wrapper p {
-  margin-bottom: 20px;
-}
-
-.signup {
-  background-color: #239b76;
-}
-
-.facebook {
-  background-color: #3b5998;
-  margin-right: 10px;
-}
-
-.twitter {
-  background-color: #55acee;
-}
-
-.btn {
-  padding: 8px 24px;
-  color: white;
-  display: inline-block;
-  opacity: 0.8;
-  border-radius: 4px;
-  text-align: center;
-}
-
-.btn:hover {
-  opacity: 1;
-}
-
-.fa {
-  margin-right: 5px;
-}
-
-header {
-  height: 65px;
-  width: 100%;
-  background-color: rgba(34,49,52,0.9);
-  position :fixed;
-  top: 0;
-  z-index: 10;
-}
-
-.logo {
-  width: 124px;
-  margin-top: 20px;
-}
-
-.header-left {
-  float: left;
-}
-
-.header-right {
-  float: right;
-  margin-right: -25px;
-}
-
-.header-right a {
-  line-height: 65px;
-  padding: 0 25px;
-  color: white;
-  display: block;
-  float: left;
-  transition: all 0.5s;
-}
-
-.header-right a:hover {
-  background-color: rgba(255,255,255,0.3);
-}
-
-.lesson-wrapper {
-  height: 580px;
-  padding-bottom: 80px;
-  padding-left: 5%;
-  padding-right: 5%;
-  background-color: #f7f7f7;
-  text-align: center;
-}
-
-.heading {
-  padding-top: 80px;
-  padding-bottom: 50px;
-  color: #5f5d60;
-}
-
-.heading h2 {
-  font-weight: normal;
-}
-
-.lesson {
-  float: left;
-  width: 25%;
-}
-
-.lesson-icon {
-  position: relative;
-}
-
-.lesson-icon p {
-  position: absolute;
-  top: 37%;
-  width: 100%;
-  color: white;
-}
-
-.text-contents {
-  width: 80%;
-  display: inline-block;
-  margin-top: 15px;
-  font-size: 13px;
-  color: #b3aeb5;
-}
-
-.heading h3 {
-  font-weight: normal;
-}
-
-.message-wrapper {
-  border-bottom: 1px solid #eee;
-  padding-bottom: 80px;
-  text-align: center;
-}
-
-.message {
-  padding: 15px 40px;
-  background-color: #5dca88;
-  cursor: pointer;
-  box-shadow: 0px 7px #1a7940;
-}
-
-.message:active {
-  position: relative;
-  top: 7px;
-  box-shadow: none;
-}
-
-footer img {
-  width: 125px;
-}
-
-footer p {
-  color: #b3aeb5;
-  font-size: 12px;
-}
-
-footer {
-  padding-top: 30px;
-  padding-bottom: 20px;
-}
-
-.menu-icon {
-  color: white;
-  float: right;
-  font-size: 25px;
-  padding: 21px 0;
-  display: none;
-}
-
-.clear {
-  clear: left;
-}
-
-@media all and (max-width: 1000px) {
-  .lesson {
-    width: 50%;
-    margin-bottom: 50px;
-  }
-
-  .lesson-wrapper {
-    height: 990px;
-  }
-
-  footer {
-    text-align: center;
-  }
-}
-
-@media all and (max-width: 750px) {
-  .top-wrapper h1 {
-    font-size: 32px;
-  }
-
-  .heading h2 {
-    font-size: 20px;
-  }
-}
-
-@media all and (max-width: 670px) {
-  .header-right {
-    display: none;
-  }
-
-  .menu-icon {
-    display: block;
-  }
-
-  .top-wrapper .btn {
-    width: 100%;
-  }
-
-  .twitter {
-    margin-top: 10px;
-  }
-
-  .top-wrapper {
-    text-align: left;
-  }
-
-  .top-wrapper h1 {
-    font-size: 24px;
-  }
-
-  .top-wrapper p {
-    font-size: 14px;
-  }
-
-  .lesson {
-    width: 100%;
-  }
-
-  .lesson-wrapper {
-    height: 1700px;
-  }
-
-  .message-wrapper .btn {
-    width: 100%;
-  }
 }
