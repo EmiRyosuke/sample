@@ -230,6 +230,14 @@ p1 {
     width: 26%;
   }
  .box1{
+  width: auto;
+  margin: 0 auto;
+  
+}
+  .item {
+    width: 26%;
+  }
+ .box1{
   width: 480px;
   margin: 0 auto;
 }
