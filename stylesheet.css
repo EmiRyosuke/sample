@@ -44,6 +44,10 @@ body {
 	width: 100%;
 	height: auto;
 }
+   #flexbox{
+      display:flex; 
+      justify-content:space-between
+    }
 
 /* -------------------- footer -------------------- */
 #footer {
