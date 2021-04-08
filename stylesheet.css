@@ -71,7 +71,8 @@ body {
 	text-align: center;
 }
 #nav ul li a {
-	display: block;
+	display: inline;
+	line-style-type: none;
 	height: 20px;
 	margin: 0;
 	padding: 10px;
